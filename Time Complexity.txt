@@ -1,0 +1,247 @@
+Problem 1: Finding Complexity using Counter Method
+
+Convert the following algorithm into a program and find its time complexity using the counter method.
+void function (int n)
+{
+    int i= 1;
+    int s =1;
+    while(s <= n)
+    {
+         i++;
+         s += i;
+     }      
+}     
+Note: No need of counter increment for declarations and scanf() and  count variable printf() statements.
+
+Input:
+ A positive Integer n
+Output:
+Print the value of the counter variable
+
+#include <stdio.h>
+void fun(int n){
+    int c=0;
+    int i=1;
+    c++;
+    int s=1;
+    c++;
+    while(s<=n){
+        c++;
+        i++;
+        c++;
+        s+=i;
+        c++;
+    }
+    c++;
+    printf("%d",c);
+}
+int main(){
+    int n;
+    scanf("%d",&n);
+    fun(n);
+    
+}
+
+Problem 2: Finding Complexity using Counter method
+
+Convert the following algorithm into a program and find its time complexity using the counter method.
+void func(int n)
+{
+    if(n==1)
+    {
+      printf("*");
+    }
+    else
+    {
+     for(int i=1; i<=n; i++)
+     {
+       for(int j=1; j<=n; j++)
+       {
+          printf("*");
+          printf("*");
+          break;
+       }
+     }
+   }                      
+ }
+
+Note: No need of counter increment for declarations and scanf() and  count variable printf() statements.
+Input:
+ A positive Integer n
+Output:
+Print the value of the counter variable
+
+#include<stdio.h>
+void fun(int n)
+{
+    int c=0;
+    if(n==1)
+    {
+        //print
+        c++;
+    }
+    else
+    {
+        for(int i=1;i<=n;i++)
+        {
+            c++;
+            for(int j=1;i<=n;j++)
+            {
+                c++;
+               //print
+               c++;
+               //print
+               c++;
+               break;
+            }
+            c++;
+        }
+        c++;
+    }
+    c++;
+    printf("%d",c);
+}
+int main(){
+    int n;
+    scanf("%d",&n);
+    fun(n);
+    return 0;
+}
+
+Problem 3: Finding Complexity using Counter Method
+
+Convert the following algorithm into a program and find its time complexity using counter method.
+ Factor(num) {
+ {
+    for (i = 1; i <= num;++i)
+    {
+     if (num % i== 0)
+        {
+          printf("%d ", i);
+        }        
+     } 
+  }
+ 
+ 
+Note: No need of counter increment for declarations and scanf() and counter variable printf() statement.
+
+Input:
+ A positive Integer n
+Output:
+Print the value of the counter variable
+
+#include<stdio.h>
+void fac(int n){
+    int c=0;
+    for(int i=1;i<=n;i++){
+        c++;
+        if(n%i==0){
+            c++;
+            //print
+        }c++;
+    }c++;
+    printf("%d",c);
+}
+int main(){
+    int n;
+    scanf("%d",&n);
+    fac(n);
+}
+
+
+Problem 4: Finding Complexity using Counter Method
+
+Convert the following algorithm into a program and find its time
+complexity using counter method.
+            
+void function(int n)
+{
+    int c= 0;
+    for(int i=n/2; i<n; i++)
+        for(int j=1; j<n; j = 2 * j)
+            for(int k=1; k<n; k = k * 2)
+                c++;
+}
+ 
+Note: No need of counter increment for declarations and scanf() and  count variable printf() statements.
+
+Input:
+ A positive Integer n
+Output:
+Print the value of the counter variable
+
+
+#include<stdio.h>
+void fun(int n){
+    int p=0;
+    p++;
+    int c=0;
+    for(int i=n/2;i<n;i++){
+        p++;
+        for(int j=1;j<n;j=j*2){
+            p++;
+            for(int k=1;k<n;k=k*2){
+                p++;
+                c++;
+                p++;
+            }p++;
+        }p++;
+    }
+    p++;
+    printf("%d",p);
+}
+int main(){
+    int n;
+    scanf("%d",&n);
+    fun(n);
+    return 0;
+}
+
+Problem 5: Finding Complexity using counter method
+
+Convert the following algorithm into a program and find its time complexity using counter method.
+
+void reverse(int n)
+{
+   int rev = 0, remainder;
+   while (n != 0) 
+    {
+        remainder = n % 10;
+        rev = rev * 10 + remainder;
+        n/= 10;
+        
+    }
+print(rev);
+}
+ 
+Note: No need of counter increment for declarations and scanf() and  count variable printf() statements.
+
+Input:
+ A positive Integer n
+Output:
+Print the value of the counter variable
+
+#include<stdio.h>
+void rev(int n){
+    int c=0;
+    int rev=0,rem;
+    c++;
+    c++;
+    while(n!=0){
+        c++;
+        rem=n%10;
+        c++;
+        rev=rev*10+rem;
+        c++;
+        n/=10;
+        c++;
+    }c++;
+    printf("%d",c);
+    
+}
+int main(){
+    int n;
+    scanf("%d",&n);
+    rev(n);
+}
+
